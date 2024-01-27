@@ -1463,7 +1463,6 @@ body.is-preload #bg:before {
 }
 
 #header .content p {
-  text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 0.8rem;
   line-height: 2;
@@ -1798,15 +1797,15 @@ body.is-preload #footer {
   #intro .image.main{
 	width: 50%;
 	height: 50%;
-	margin: 1rem auto 0.5rem;
+	margin: 0.5rem auto 0.5rem;
   }
 
 #intro p{
-	padding: 2rem 3rem;
+	padding: 2rem 0.5rem;
 }
 
 #intro .major{
-	margin: 0rem 3rem;
+	margin: 0rem 0.5rem;
 }
 
 .logo{
