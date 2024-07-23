@@ -34,34 +34,69 @@
 
 		}
 		.swiper-container {
-    margin-bottom: 2rem;
-    position: relative; /* Ensure container has relative positioning */
-}
+			margin-bottom: 2rem;
+			position: relative; /* Ensure container has relative positioning */
+		}
 
-.swiper-slide img {
-    object-fit: cover;
-    width: 100%;
+		.swiper-slide img {
+			object-fit: cover;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			color: #f1b442;
+			position: absolute; /* Absolute positioning to control the location */
+			top: 50%; /* Center vertically */
+			transform: translateY(-50%); /* Adjust positioning to center */
+			z-index: 10; /* Ensure buttons are above the slides */
+		}
+
+		.swiper-button-next {
+			right: 10px; /* Adjust as needed */
+		}
+
+		.swiper-button-prev {
+			left: 10px; /* Adjust as needed */
+		}
+		.icons {
+    list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #f1b442;
-    position: absolute; /* Absolute positioning to control the location */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%); /* Adjust positioning to center */
-    z-index: 10; /* Ensure buttons are above the slides */
+.icons li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative; /* Ensure the parent li is the reference point for positioning */
 }
 
-.swiper-button-next {
-    right: 10px; /* Adjust as needed */
+.icon {
+    text-decoration: none;
+    color: inherit;
 }
 
-.swiper-button-prev {
-    left: 10px; /* Adjust as needed */
+.hover-message {
+    position: absolute;
+    bottom: 120%; /* Position above the icon */
+    left: 0%;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    white-space: nowrap;
+    font-size: 12px;
 }
 
+.phone-icon:hover .hover-message {
+    display: block;
+}
+
+		.phone-icon:hover .hover-message{
+			display: block;
+		}
 	</style>
   </head>
   <body class="is-preload">
@@ -365,7 +400,7 @@
 			</p>
 
 			<p>
-				<span style="color: #f1b442;"></span>Role</span>:Frontend lead, Full-stack development, including frontend and
+				<span style="color: #f1b442;">Role</span>: Frontend lead, Full-stack development, including frontend and
 				backend implementation. Database setup and containerization.
 			</p>
 
@@ -423,11 +458,11 @@
 				products on sale.
 			  </p>
 			  <p>
-				Role - Full-stack development, including frontend and backend
+				<span style="color: #f1b442;">Role</span>: Full-stack development, including frontend and backend
 				implementation. Database setup and containeriation.
 			  </p>
 			  <p>
-				Technologies Used - Javascript, Typescript, Express, Node.js, EJS,
+				<span style="color: #f1b442;">Technologies Used</span> - Javascript, Typescript, Express, Node.js, EJS,
 				MongoDB and Docker
 			  </p>
 	
@@ -440,10 +475,6 @@
         </article>
 
 
-
-		
-
-        
 
         <!-- About -->
         <article id="about">
@@ -487,12 +518,12 @@
               <li><input type="reset" value="Reset" /></li>
             </ul>
           </form>
-          <ul class="icons">
-            <!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-            <li>
+
+          <ul style="position: relative; margin-top: 3rem;" class="icons">
+            <li class="phone-icon">
               <a href="tel:+2347086689948" class="icon solid fa-phone">
                 <span class="label">Phone</span>
+				<span class="hover-message">Call us at +234 708 668 9948</span>
               </a>
             </li>
 
